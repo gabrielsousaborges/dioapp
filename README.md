@@ -1,13 +1,13 @@
-DioApp
+# DioApp
 Este é o repositório oficial do DioApp, um aplicativo Flutter desenvolvido como parte do bootcamp da Digital Innovation One (DIO). O DioApp é uma aplicação prática que incorpora conceitos e desafios apresentados nas aulas do bootcamp.
 
-Descrição do Projeto
+## Descrição do Projeto
 O DioApp é uma aplicação Flutter criada para fornecer uma implementação prática dos conceitos e desafios apresentados durante o bootcamp da DIO. O aplicativo inclui várias funcionalidades e desafios específicos relacionados ao desenvolvimento mobile com Flutter.
 
-Conteúdo do Bootcamp Abordado
+# Conteúdo do Bootcamp Abordado
 O DioApp abrange uma variedade de tópicos e módulos do bootcamp, incluindo, mas não se limitando a:
 
-Widgets e Elementos Básicos do Flutter.
+# Widgets e Elementos Básicos do Flutter.
 Navegação e Roteamento no Flutter.
 Chamadas de API e integração com serviços externos.
 Desenvolvimento de interfaces de usuário responsivas.
@@ -22,7 +22,7 @@ Integração de API: Veja como integrar dados externos por meio de chamadas de A
 
 Desafios Práticos: Participe de desafios práticos que testam suas habilidades no desenvolvimento Flutter.
 
-Como Contribuir
+# Como Contribuir
 Se você deseja contribuir para o desenvolvimento do DioApp, siga estas etapas:
 
 Faça um fork do repositório DioApp.
