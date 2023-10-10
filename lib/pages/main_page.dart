@@ -1,8 +1,11 @@
 import 'package:dioapp/pages/card_page.dart';
-import 'package:dioapp/pages/dados_cadastrais.dart';
+import 'package:dioapp/pages/consulta_cep.dart';
+import 'package:dioapp/pages/dados_cadastrais/dados_cadastrais_hive.dart';
 import 'package:dioapp/pages/list_view_h.dart';
-import 'package:dioapp/pages/list_view_horizontal..dart';
-import 'package:dioapp/pages/tarefa_page.dart';
+import 'package:dioapp/pages/list_view_horizontal.dart';
+import 'package:dioapp/pages/tarefa/tarefa_hive_page.dart';
+import 'package:dioapp/pages/tarefa/tarefa_sqlite_page.dart';
+import 'package:dioapp/pages/teste_http.dart';
 import 'package:dioapp/shared/widgets/custom_drawer.dart';
 import 'package:flutter/material.dart';
 
@@ -36,8 +39,8 @@ class _MainPageState extends State<MainPage> {
                 },
                 children: [
                   CardPage(),
-                  ListViewPage(),
-                  TarefaPage(),
+                  ConsultaCEP(),
+                  TarefaSQLitePage(),
                 ],
               ),
             ),
@@ -50,8 +53,8 @@ class _MainPageState extends State<MainPage> {
                   icon: Icon(Icons.home),
                 ),
                 BottomNavigationBarItem(
-                  label: "Pag1",
-                  icon: Icon(Icons.pageview),
+                  label: "BuscaCEP",
+                  icon: Icon(Icons.get_app_rounded),
                 ),
                 BottomNavigationBarItem(
                   label: "Tarefas",

@@ -1,14 +1,16 @@
 import 'package:dioapp/services/app_storage.dart';
 import 'package:flutter/material.dart';
 
-class ConfiguracoesPage extends StatefulWidget {
-  const ConfiguracoesPage({super.key});
+class ConfiguracoesSharedPreferencesPage extends StatefulWidget {
+  const ConfiguracoesSharedPreferencesPage({super.key});
 
   @override
-  State<ConfiguracoesPage> createState() => _ConfiguracoesPageState();
+  State<ConfiguracoesSharedPreferencesPage> createState() =>
+      _ConfiguracoesSharedPreferencesPageState();
 }
 
-class _ConfiguracoesPageState extends State<ConfiguracoesPage> {
+class _ConfiguracoesSharedPreferencesPageState
+    extends State<ConfiguracoesSharedPreferencesPage> {
   AppStorageService storage = AppStorageService();
 
   TextEditingController nomeUsuarioController = TextEditingController();

@@ -1,7 +1,11 @@
-import 'package:dioapp/pages/configuracao_page.dart';
-import 'package:dioapp/pages/dados_cadastrais.dart';
+import 'package:dioapp/pages/configuracoes/configuracao_shared_page.dart';
+import 'package:dioapp/pages/configuracoes/configuracoes_hive_page.dart';
+import 'package:dioapp/pages/dados_cadastrais/dados_cadastrais_hive.dart';
 import 'package:dioapp/pages/login_page.dart';
-import 'package:dioapp/pages/numeros_aleatorios_pages.dart';
+import 'package:dioapp/pages/numeros_aleatorios/numeros_aleatorios_hive_page.dart';
+import 'package:dioapp/pages/numeros_aleatorios/numeros_aleatorios_shared_pages.dart';
+import 'package:dioapp/pages/posts_page.dart';
+import 'package:dioapp/pages/tarefa/tarefa_http_page.dart';
 import 'package:dioapp/shared/widgets/text_label.dart';
 import 'package:flutter/material.dart';
 
@@ -11,8 +15,7 @@ class CustomDrawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Drawer(
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
+      child: ListView(
         children: [
           GestureDetector(
             child: UserAccountsDrawerHeader(
@@ -68,8 +71,10 @@ class CustomDrawer extends StatelessWidget {
             ),
             onTap: () {
               Navigator.pop(context);
-              Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => DadosCadastrais()));
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => DadosCadastraisHivePage()));
             },
           ),
           Divider(),
@@ -88,8 +93,10 @@ class CustomDrawer extends StatelessWidget {
             ),
             onTap: () {
               Navigator.pop(context);
-              Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => ConfiguracoesPage()));
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => ConfiguracoesHivePage()));
             },
           ),
           Divider(),
@@ -155,8 +162,50 @@ class CustomDrawer extends StatelessWidget {
             ),
             onTap: () {
               Navigator.pop(context);
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (bc) => NumerosAleatoriosHivePage()));
+            },
+          ),
+          Divider(),
+          GestureDetector(
+            child: Container(
+              padding: EdgeInsets.symmetric(vertical: 5, horizontal: 20),
+              child: Row(
+                children: [
+                  Icon(Icons.post_add),
+                  SizedBox(
+                    width: 5,
+                  ),
+                  Text("Posts"),
+                ],
+              ),
+            ),
+            onTap: () {
+              Navigator.pop(context);
+              Navigator.push(
+                  context, MaterialPageRoute(builder: (bc) => PostPage()));
+            },
+          ),
+          Divider(),
+          GestureDetector(
+            child: Container(
+              padding: EdgeInsets.symmetric(vertical: 5, horizontal: 20),
+              child: Row(
+                children: [
+                  Icon(Icons.task),
+                  SizedBox(
+                    width: 5,
+                  ),
+                  Text("Back4App"),
+                ],
+              ),
+            ),
+            onTap: () {
+              Navigator.pop(context);
               Navigator.push(context,
-                  MaterialPageRoute(builder: (bc) => NumerosAleatoriosPage()));
+                  MaterialPageRoute(builder: (bc) => TarefaHTTPPage()));
             },
           ),
           Divider(),
